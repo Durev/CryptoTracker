@@ -20,4 +20,4 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*.rb'
     - 'Guardfile'
-- 'vendor/bundle'
+    - 'vendor/bundle'
