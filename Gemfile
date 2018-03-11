@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.6'
   gem 'rubocop', require: false
 end
@@ -29,7 +30,6 @@ group :development do
 end
 
 group :test do
-  gem 'factory_bot_rails'
   gem 'faker'
   gem "rspec_junit_formatter"
   gem 'shoulda-matchers', '~> 3.0'
