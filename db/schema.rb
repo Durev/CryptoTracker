@@ -10,9 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20180311223539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "currencies", force: :cascade do |t|
+    t.string "name"
+    t.string "symbol"
+    t.integer "rank"
+    t.float "price_usd"
+    t.float "price_btc"
+    t.float "market_cap_usd"
+    t.float "percent_change_1h"
+    t.float "percent_change_24h"
+    t.float "percent_change_7d"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
