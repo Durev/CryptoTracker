@@ -7,6 +7,9 @@
 # Ignore SimpleCov reporting
 coverage
 
+# Ignore Redis dump file
+dump.rdb
+
 # Ignore bundler config.
 /.bundle
 
