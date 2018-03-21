@@ -9,5 +9,7 @@ RSpec.describe Currency, type: :model do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:symbol) }
     it { is_expected.to validate_presence_of(:price_usd) }
+    it { is_expected.to validate_uniqueness_of(:name) }
+    it { is_expected.to validate_uniqueness_of(:symbol) }
   end
 end
