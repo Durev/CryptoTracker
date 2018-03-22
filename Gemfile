@@ -5,8 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'coffee-rails', '~> 4.2'
+gem 'delayed_job_active_record'
+gem 'httparty'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
