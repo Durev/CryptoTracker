@@ -1,0 +1,10 @@
+<h1><%= @currency.name %></h1>
+<h2><%= @currency.symbol %></h2>
+<p>Rank : <%= @currency.rank %></p>
+
+<h4>Price : $<%= @currency.price_usd %></h4>
+<h4>Last 1 h : <%= @currency.percent_change_1h %> %</h4>
+<h4>Last 24 h : <%= @currency.percent_change_24h %> %</h4>
+<h4>Last 7 d : <%= @currency.percent_change_7d %> %</h4>
+
+<p>Last updated at <%= @currency.updated_at %></p>
