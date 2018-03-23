@@ -1,0 +1,11 @@
+<div class="row overview">
+  <h2><%= currency.name %> - <%= currency.symbol %></h2>
+
+  <h3>Price : $<%= currency.price_usd %></h3>
+  <p>Last updated at <%= currency.updated_at %></p>
+
+  <%= link_to "MOAR #{currency.name}", currency_path(currency) %>
+
+  <hr>
+</div>
+
