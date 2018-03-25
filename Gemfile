@@ -8,6 +8,8 @@ end
 gem 'bootstrap-sass', '3.3.7'
 gem 'coffee-rails', '~> 4.2'
 gem 'delayed_job_active_record'
+gem 'devise'
+gem "figaro"
 gem 'httparty'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'

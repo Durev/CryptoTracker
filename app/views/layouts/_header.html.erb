@@ -1,12 +1,26 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "Another CryptoTracker", root_path, id: "logo" %>
+  <div class="container-fluid" id="header-container">
+    <div class="logo">
+      <%= link_to root_path, id: "logo-txt" do %>
+        <%= image_tag 'bitcoin-logo.png', id: "logo-img" %> Another CryptoTracker
+      <% end %>
+    </div>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Cryptos", currencies_path %></li>
-        <li><%= link_to "Log in", '#' %></li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Log in', new_user_session_path %>
+          <% end %>
+        </li>
       </ul>
     </nav>
   </div>
 </header>
+
+<p>
+
+  </p>

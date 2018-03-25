@@ -55,7 +55,7 @@ p {
 
 /* header */
 
-#logo {
+#logo-txt {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -66,13 +66,36 @@ p {
   font-weight: bold;
 }
 
-#logo:hover {
+#logo-txt:hover {
   color: #fff;
   text-decoration: none;
+}
+
+#logo-img {
+  width: 50px;
+  margin: 0px 10px 8px 0px;
+}
+
+.nav {
+  padding-top: 8px;
+  padding-right: 12px;
 }
 
 /* Currencies List */
 
 .overview {
   text-align: center;
+}
+
+/* Devise forms */
+
+.devise-form {
+  width: 30%;
+  min-width: 300px;
+  margin: auto;
+  text-align: center;
+
+  .actions {
+    margin: 10px;
+  }
 }
