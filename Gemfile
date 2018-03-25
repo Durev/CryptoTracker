@@ -7,7 +7,6 @@ end
 
 gem 'bootstrap-sass', '3.3.7'
 gem 'coffee-rails', '~> 4.2'
-gem 'delayed_job_active_record'
 gem 'devise'
 gem "figaro"
 gem 'httparty'
@@ -16,6 +15,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.5'
 gem 'sass-rails', '~> 5.0'
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
