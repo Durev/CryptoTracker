@@ -1,0 +1,5 @@
+:schedule:
+  PricesUpdateJob:
+    every: '10m'
+  NewCurrenciesCreationJob:
+    every: '1d'
