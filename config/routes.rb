@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # Admin dashboard
   devise_for :admins
-  get 'admins/enterthiswayplz', to: 'admins#dashboard'
+  get 'admins/dashboard'
 
   # Sidekiq dashboard
   require 'sidekiq/web'
