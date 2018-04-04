@@ -1,11 +1,22 @@
 <div class="row overview">
   <h2><%= currency.name %> - <%= currency.symbol %></h2>
+  <%= link_to "MOAR #{currency.name}", currency_path(currency) %>
 
   <h3>Price : $<%= currency.price_usd %></h3>
   <p>Last updated at <%= currency.updated_at %></p>
 
-  <%= link_to "MOAR #{currency.name}", currency_path(currency) %>
+
+  <% if user_signed_in? %>
+    <% unless current_user.currencies.exists?(currency.id) %>
+
+      <form action="/fav" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="currency[id]" value="<%= currency.id %>">
+        <input type="submit" value="Add to favs" class="btn btn-warning btn-lg">
+      </form>
+
+    <% end %>
+  <% end %>
 
   <hr>
-</div>
-
+</div><!-- /row -->
