@@ -7,6 +7,12 @@ class FavouritesController < ApplicationController
     redirect_to favourites_index_path
   end
 
+  def destroy
+    @currency = Currency.find(currency_params[:id])
+    current_user.favourites.where(currency_id: @currency.id).destroy_all
+    redirect_to favourites_index_path
+  end
+
   private
 
     def currency_params
