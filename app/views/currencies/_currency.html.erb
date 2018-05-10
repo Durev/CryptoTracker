@@ -1,24 +1,23 @@
 <div class="row overview">
-  <h2><%= currency.name %> - <%= currency.symbol %></h2>
-  <%= link_to "MOAR #{currency.name}", currency_path(currency) %>
+  <h2><%= link_to "#{currency.name} - #{currency.symbol}", currency_path(currency) %></h2>
 
   <h3>Price : $<%= currency.price_usd %></h3>
 
   <% if user_signed_in? %>
-    <% unless current_user.currencies.exists?(currency.id) %>
-
-      <form action="/fav" method="post">
-        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <input type="hidden" name="currency[id]" value="<%= currency.id %>">
-        <input type="submit" value="Add to favs" class="btn btn-success btn">
-      </form>
-
-    <% else %>
+    <% if current_user.currencies.exists?(currency.id) %>
 
       <form action="/remove_fav" method="post">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <input type="hidden" name="currency[id]" value="<%= currency.id %>">
         <input type="submit" value="Remove from favs" class="btn btn-danger btn">
+      </form>
+
+    <% else %>
+
+      <form action="/fav" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="currency[id]" value="<%= currency.id %>">
+        <input type="submit" value="Add to favs" class="btn btn-success btn">
       </form>
 
     <% end %>

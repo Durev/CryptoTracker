@@ -9,7 +9,7 @@ feature "Public access to currencies", type: :feature do
     expect(page).to have_content fancy_crypto.name
     expect(page).to have_content fancy_crypto.price_usd
 
-    click_link "MOAR #{fancy_crypto.name}"
+    click_link "#{fancy_crypto.name} - #{fancy_crypto.symbol}"
 
     expect(current_path).to eq currency_path(fancy_crypto)
     expect(page).to have_content fancy_crypto.percent_change_1h
