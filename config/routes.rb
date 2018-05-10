@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   devise_for :users
   resources :currencies, only: %i(index show)
+  get 'favourites/index'
+  post '/fav', to: 'favourites#create'
+  post '/remove_fav', to: 'favourites#destroy'
 
   # Admin dashboard
   devise_for :admins
