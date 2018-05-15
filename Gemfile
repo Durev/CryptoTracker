@@ -8,7 +8,7 @@ end
 gem 'bootstrap-sass', '3.3.7'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
-gem "figaro"
+gem 'figaro'
 gem 'httparty'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -29,8 +29,8 @@ group :development, :test do
 end
 
 group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -39,7 +39,7 @@ end
 
 group :test do
   gem 'faker'
-  gem "rspec_junit_formatter"
+  gem 'rspec_junit_formatter'
   gem 'shoulda-matchers', '~> 3.0'
   gem 'simplecov'
 end
